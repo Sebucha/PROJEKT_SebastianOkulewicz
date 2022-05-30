@@ -1,0 +1,350 @@
+@import "colors";
+@import "animation";
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+html {
+	scroll-padding-top: 82px;
+}
+body {
+	position: relative;
+	font-family: "Lato", sans-serif;
+	background-color: $bg-color;
+}
+
+.blue-text {
+	color: $main-color;
+}
+.shadow-bg {
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+h2 {
+	text-transform: uppercase;
+	text-align: center;
+}
+.underline {
+	margin: 0 auto 40px;
+	height: 5px;
+	width: 100px;
+	background-color: $main-color;
+}
+.userName {
+	font-size: 14px;
+	justify-content: center;
+	align-items: center;
+}
+nav {
+	text-transform: uppercase;
+	transition: background-color 0.6s;
+	z-index: 1;
+
+	.nav-link,
+	i {
+		color: $white;
+	}
+	.nav-link:hover {
+		color: $main-color;
+	}
+	.navbar-brand {
+		font-weight: bold;
+		color: $white;
+	}
+	.active {
+		color: $main-color;
+	}
+	.fa-bars {
+		padding: 10px;
+	}
+}
+header {
+	color: $white;
+	h1 {
+		text-transform: uppercase;
+	}
+	.hero-img {
+		position: relative;
+		height: 100vh;
+		background-image: url("../img/sea-gf135fc2bf_640.jpg");
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+		z-index: 0;
+	}
+	.hero-shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+		z-index: -10;
+	}
+	.hero-text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		padding: 10px;
+		text-align: center;
+		z-index: 5;
+	}
+	.btn-outline-light {
+		text-transform: uppercase;
+	}
+	.fa-chevron-down {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 20px;
+		font-size: 30px;
+		color: $white;
+	}
+}
+@media (min-width: 1200px) {
+	header {
+		.hero-img {
+			background-image: url("../img/sea-g293184af3_1920.jpg");
+		}
+	}
+}
+
+.aboutme {
+	i {
+		margin-top: 20px;
+		font-size: 30px;
+	}
+	.aboutme-card-title {
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+	.aboutme-card-text {
+		font-size: 14px;
+	}
+	/*.aboutme-hover {
+		//transition: color 0.3s;
+	}*/
+	.aboutme-hover:hover {
+		color: $main-color;
+	}
+}
+.aboutme-hero {
+	position: relative;
+	background-image: url(../img/tenerife-g6414f7d05_640.jpg);
+	background-position: center;
+	background-size: cover;
+	color: $white;
+	z-index: 0;
+	.aboutme-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.2);
+		z-index: -5;
+	}
+	.about-hero-item {
+		margin: 10px 0;
+
+		i {
+			font-size: 36px;
+		}
+		.aboutme-hero-title {
+			font-size: 24px;
+		}
+	}
+}
+.surfclasses {
+	.carousel-item {
+		position: relative;
+		height: 600px;
+	}
+	.carousel-caption {
+		position: absolute;
+		left: 0;
+		right: 0;
+		padding: 40px 0;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+	.carousel-indicators {
+		padding-bottom: 20px;
+	}
+}
+.prices {
+	.price-box {
+		margin: 20px 10px;
+		padding: 30px;
+		background-color: $white;
+		box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+		transition: transform 0.3s;
+		h3 {
+			color: $main-color;
+			text-transform: uppercase;
+		}
+		span {
+			font-weight: bold;
+		}
+		button {
+			padding: 10px 20px;
+			text-transform: uppercase;
+		}
+		.price-tag {
+			font-weight: bold;
+			font-size: 30px;
+		}
+	}
+
+	.price-box:hover {
+		transform: scale(1.05);
+	}
+	.price-info {
+		margin-top: 30px;
+
+		a {
+			text-decoration: none;
+		}
+	}
+}
+.trips {
+	position: relative;
+	background-image: url("/img/IMG_9168.JPG");
+	background-size: cover;
+	background-attachment: fixed; //zeby zdjecie bylo takie zajebiste jak jest
+	z-index: 0;
+	h2 {
+		color: $another-color;
+	}
+	.trips-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.4);
+		z-index: -5;
+	}
+	.card {
+		transition: transform 0.3s;
+		img {
+			height: 300px;
+			object-fit: cover;
+		}
+		i {
+			padding: 10px;
+		}
+	}
+
+	.card:hover {
+		transform: scale(0.96);
+	}
+	.card-title {
+		margin-bottom: 20px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	.card-body {
+		height: 160px;
+	}
+}
+.achievements i {
+	padding: 10px;
+	font-size: 48px;
+	color: #fff;
+	text-shadow: 0 0 5px #000;
+}
+
+.achievements .achievements-list {
+	padding: 20px 0;
+}
+
+.achievements .achievement-number {
+	font-size: 22px;
+}
+
+.achievements .achievement-text {
+	font-size: 13px;
+	text-transform: uppercase;
+}
+.contact {
+	position: relative;
+	background-image: url("/img/BQYN5427.JPG");
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	z-index: 0;
+
+	.contact-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 9, 27, 0.6);
+		z-index: -5;
+	}
+
+	h2 {
+		color: $another-color;
+		font-weight: bold;
+	}
+	.contact-us {
+		color: $white;
+		display: flex;
+		align-items: center;
+		.contact-item {
+			margin: 30px 0;
+			h3 {
+				margin-bottom: 15px;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+			}
+			.social-media {
+				font-size: 26px;
+				i {
+					padding: 10px;
+					color: $white;
+				}
+				i:hover {
+					color: $another-color;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 375px) {
+	header {
+		h1 {
+			font-size: 36px;
+		}
+		padding: {
+			font-size: 16px;
+		}
+	}
+}
+@media (min-width: 768px) {
+	header {
+		h1 {
+			font-size: 42px;
+		}
+		padding: {
+			font-size: 20px;
+		}
+	}
+}
+@media (min-width: 992px) {
+	/*html {
+		scroll-padding-top: 72px;
+	}*/
+	nav {
+		height: 82px;
+	}
+
+	.aboutme-hero {
+		background-image: url(../img/tenerife-g94d8bc5ea_1920.jpg);
+	}
+	.price-info {
+		font-size: 18px;
+	}
+}
